@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('Imagens/fundo_preto.png'); /* Fundo da autoescola */
+    background-size:auto;
+    background-position: center;
+    color: #333;
+}
+
+header {
+    background-color: rgb(242, 255, 0); /* Fundo preto com 70% de opacidade */
+    padding: 3px 20px; /* Reduzido para 5px */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o conteúdo do cabeçalho */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Centraliza as opções do cabeçalho */
+    color:black;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px; /* Espaçamento entre itens */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove a margem do último item */
+}
+
+nav ul li a {
+     color: rgb(0, 0, 0); /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 20px; /* Aumentei o tamanho da fonte para 20px */
+    font-weight: bold; /* Texto em negrito */
+    padding: 8px; /* Adicionei um pouco de espaçamento */
+    transition: color 0.3s; /* Transição suave para a mudança de cor */
+    
+}
+
+nav ul li a:hover {
+    color: #ffeb3b; /* Cor ao passar o mouse, você pode ajustar */
+}
+
+main {
+    flex-grow: 1; /* Permite que a seção principal cresça e ocupe espaço */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0; /* Adiciona espaço superior e inferior */
+}
+
+.contact-info {
+    background-color: rgba(0, 195, 255, 0.668);
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    margin: 50px auto; /* Adiciona margem superior de 50px e centraliza horizontalmente */
+    max-width: 600px; /* Define uma largura máxima para o box */
+}
+
+
+.contact-details p {
+    margin: 15px 0;
+}
+
+.contact-details a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-details a:hover {
+    color: #333;
+}
+
+
+main {
+    flex-grow: 1; /* Permite que a seção principal cresça e ocupe espaço */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0; /* Adiciona espaço superior e inferior */
+}
+
+.contact-info {
+    
+    border: 2px solid #ddf100fb;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details p {
+    margin: 15px 0;
+}
+
+.contact-details a {
+    color: #91ff00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-details a:hover {
+    color: #333;
+}
+
+
+
+footer {
+    background-color:rgb(242, 255, 0); /* Fundo preto com um pouco de transparência */
+    color: rgb(0, 0, 0); /* Texto branco */
+    text-align: center;
+    position: fixed; /* Mantém o rodapé fixo na tela */
+    bottom: 0; /* Alinha o rodapé à parte inferior da página */
+    width: 100%; /* Faz o rodapé ocupar toda a largura da página */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+    z-index: 10; /* Garante que o rodapé fique sobre os outros elementos */
+}
+

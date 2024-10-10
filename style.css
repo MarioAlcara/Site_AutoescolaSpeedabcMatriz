@@ -1,0 +1,261 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('Imagens/fundo_preto.png'); /* Fundo da autoescola */
+    background-size: contain;
+    background-position: center;
+    color: #ffffff;
+}
+
+
+
+.prev, .next {
+    display: none; /* Oculta as setas */
+}
+
+
+h2 {
+    display: block; /* Garante que o h2 seja tratado como um elemento em bloco */
+    width: 100vw; /* Faz o h2 ocupar 100% da largura da viewport */
+    color: #000000;
+    background-color: rgb(234, 255, 0);
+    padding: 10px;
+    margin: 0; /* Remove a margem padrão do h2 */
+    text-align: center; /* Centraliza o texto */
+    position: relative; /* Permite o controle de elementos posicionados dentro, se necessário */
+    left: 50%; /* Centraliza a posição em relação à viewport */
+    transform: translateX(-50%); /* Corrige o deslocamento causado pelo left */
+}
+
+
+p {
+    color: #fff;
+}
+
+/* Cabeçalho e navegação */
+header {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px; /* Tamanho igual ao de contato.css */
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* Slider de imagens */
+.slider-container {
+    width: 100vw; /* Usa 100% da largura da viewport */
+    height: 60vh; /* Ajuste a altura do slider para algo mais médio */
+    position:relative;
+    overflow: hidden; /* Esconde o excesso das imagens */
+}
+
+.slider-container img {
+    width: 100%; /* A imagem cobre 100% da largura do contêiner */
+    height: 100%; /* A imagem cobre 100% da altura do contêiner */
+    object-fit: cover; /* Preenche a área sem distorcer a imagem */
+    position: absolute; /* Para sobrepor as imagens */
+    top: 0; /* Remova o deslocamento vertical */
+    left: 0; /* Remova o deslocamento horizontal */
+    transition: opacity 1s ease; /* Transição suave ao mudar de imagem */
+    opacity: 0; /* As imagens começam ocultas */
+}
+
+.galeria-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza as fotos */
+    align-items: center; /* Alinha verticalmente ao centro */
+    gap: 20px; /* Espaçamento entre as fotos */
+    padding: 20px;
+    max-width: 1200px; /* Largura máxima da galeria */
+    margin: auto; /* Centraliza horizontalmente o contêiner na página */
+}
+
+.galeria-item img {
+    margin: auto; /* Centraliza as imagens dentro do contêiner */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slider-container img.active {
+    opacity: 1; /* Apenas a imagem ativa será visível */
+}
+
+/* Seção sobre carros e motos */
+#quem-somos-nos {
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto translúcido */
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px; /* Limita a largura da seção para centralização */
+}
+
+#quem-somos-nos h2 {    
+    font-size: 28px;
+    margin-bottom: 40px; /* Espaçamento abaixo do título */
+}
+
+.quem-somos-nos {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.veiculo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    width: 100%;
+    gap: 20px;
+}
+
+.veiculo.imagem-direita {
+    flex-direction: row-reverse;
+}
+
+.veiculo img {
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto com margem automática para centralizar */
+.veiculo div {
+    flex: 1;
+}
+
+/* Seção Nossa Equipe */
+.fotos-principais {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto translúcido */
+    margin: 0 auto;
+    max-width: 1200px; /* Centraliza a seção */
+}
+
+.fotos-principais h2 {    
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.fotos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.foto-item {
+    width: calc(33% - 20px); /* Três imagens por linha */
+    max-width: 320px; /* Largura máxima das imagens */
+}
+
+.foto-item img {
+    width: 100%; /* Ajusta a imagem ao contêiner */
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Seção Nova - Nossa Missão */
+.nossa-missao {
+    text-align: center;
+    margin: 70px 0; /* Aumenta o espaço entre as seções */
+   
+    color:black;
+    
+}
+
+.nossa-missao h2 {
+    margin-bottom: 30px;
+}
+
+.nossa-missao .fotos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nossa-missao .foto-item img {
+    width: 100%; /* Mantém a largura ocupando todo o contêiner */
+    height: 350px; /* Aumenta a altura das imagens para 350px */
+    object-fit: cover; /* Garante que a proporção da imagem seja mantida */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .foto-item {
+        width: calc(50% - 20px); /* Duas imagens por linha */
+    }
+}
+
+@media (max-width: 480px) {
+    .foto-item {
+        width: 100%; /* Uma imagem por linha em telas pequenas */
+    }
+}
+
+footer {
+   
+    color: rgb(0, 0, 0); /* Cor do texto preta */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Ajuste o padding conforme necessário */
+    position: relative; /* Mantém o rodapé no fluxo do documento */
+    width: 100%; /* Faz o rodapé ocupar toda a largura da página */
+    box-shadow: none; /* Remove a sombra */
+    height: 50px; /* Defina uma altura fixa para o rodapé */
+}
+
+footer nav ul {
+    padding: 0; /* Remove padding da lista */
+    margin: 0; /* Remove margin da lista */
+}
+
+footer h2, footer p {
+    color: black; /* Muda a cor do texto do h2 para preto */
+    margin: 0; /* Remove margens para evitar espaçamento extra */
+}
+
+footer p {
+    color: rgb(255, 255, 255); /* Muda a cor do texto do h2 para preto */
+    margin: 0; /* Remove margens para evitar espaçamento extra */
+}
+
+
+

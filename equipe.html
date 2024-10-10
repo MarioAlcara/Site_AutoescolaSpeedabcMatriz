@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <link rel="stylesheet" href="equipe.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Pagina principal</a></li>
+                <li><a href="nossos-servicos.html">Nossos Serviços</a></li>
+                <li><a href="galeria.html">Nossos alunos</a></li>
+                <li><a href="equipe.html">Nossa Equipe</a></li>  
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Título da Galeria -->
+    <h1>Nossa Equipe</h1>
+
+    <div class="galeria-container">
+        <div class="galeria-item" onclick="abrirImagem('moto.png', 0)">
+            <img src="Imagens/Moto.png" alt="Foto 1">
+        </div>
+        <div class="galeria-item" onclick="abrirImagem('Mario.jpeg', 1)">
+            <img src="Imagens/Mario.jpeg" alt="Foto 2">
+        </div>
+        <div class="galeria-item" onclick="abrirImagem('Adriana.jpeg', 2)">
+            <img src="Imagens/Adriana.jpeg" alt="Foto 3">
+        </div>
+        <div class="galeria-item" onclick="abrirImagem('Luiz.jpeg', 3)">
+            <img src="Imagens/Luiz.jpeg" alt="Foto 4">
+        </div>
+        <div class="galeria-item" onclick="abrirImagem('Antonio.jpeg', 4)">
+            <img src="Imagens/Antonio.jpeg" alt="Foto 5">
+        </div>
+        <div class="galeria-item" onclick="abrirImagem('Silvia.jpeg', 5)">
+            <img src="Imagens/Silvia.jpeg" alt="Foto 6">
+        </div>
+        <div class="galeria-item" onclick="abrirImagem('equipe1000.jpeg', 6)">
+            <img src="Imagens/equipe1000.jpg" alt="Foto 7">
+        </div>
+        <div class="galeria-item" onclick="abrirImagem('instrutores.png', 7)">
+            <img src="Imagens/instrutores.png" alt="Foto 8">
+        </div>
+        <div class="galeria-item" onclick="abrirImagem('speed1.jpeg', 8)">
+            <img src="Imagens/speed1.jpeg" alt="Foto 9">
+        </div>
+        <div class="galeria-item" onclick="abrirImagem('turma10.jpeg', 9)">
+            <img src="Imagens/turma10.jpeg" alt="Foto 10">
+        </div>
+        <div class="galeria-item" onclick="abrirImagem('atualizado.jpeg', 10)">
+            <img src="Imagens/autoescola.jpg" alt="Foto 11">
+        </div>
+        <div class="galeria-item" onclick="abrirImagem('carros_e_motos2.jpeg', 11)">
+            <img src="Imagens/carros_e_motos2.jpeg" alt="Foto 12">
+        </div>
+    </div>
+    
+    
+
+    <!-- Lightbox modal -->
+<!-- Lightbox modal -->
+<div id="lightbox" class="lightbox" style="display: none;">
+    <span class="fechar" onclick="fecharImagem()">&times;</span>
+    <div class="prev" onclick="mudarImagem(-1)">&#10094;</div>
+    <img class="lightbox-imagem" id="imagem-ampliada">
+    <div class="next" onclick="mudarImagem(1)">&#10095;</div>
+</div>
+
+
+
+<!-- Rodapé -->
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+        <p>&copy;© 2024 Autoescola Speed ABC. Todos os Direitos reservados!</p>
+    </footer>
+    <script src="script.js"></script> <!-- Link para o arquivo JavaScript -->    
+</body>
+</html>
+

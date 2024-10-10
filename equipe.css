@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('Imagens/fundo_preto.png'); /* Fundo da autoescola */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+/* Cabeçalho e navegação */
+header {
+    background-color: rgb(255, 247, 0);
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Cor de destaque ao passar o mouse */
+}
+
+/* Título da Galeria */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin: 20px 0;
+}
+
+/* Galeria de Fotos */
+.galeria-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as fotos se organizem em várias linhas */
+    justify-content: center; /* Centraliza as fotos */
+    gap: 20px; /* Espaçamento entre as fotos */
+    padding: 20px;
+    max-width: 1200px; /* Largura máxima da galeria */
+    margin: auto; /* Centraliza a galeria na página */
+}
+
+.galeria-item {
+    flex: 1 1 calc(30% - 20px); /* Três imagens por linha, considerando o espaço entre elas */
+    max-width: calc(50% - 20px); /* Largura máxima das imagens */
+    margin-bottom: 20px; /* Espaçamento vertical entre as linhas */
+}
+
+.galeria-item img {
+    width: 100%; /* As imagens ocupam 100% do contêiner */
+    height: 400px; /* Defina uma altura fixa para padronizar o tamanho */
+    object-fit: cover; /* Cobre o contêiner, cortando partes da imagem para manter a proporção */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+
+
+@media (max-width: 768px) {
+    .galeria-item {
+        flex: 1 1 calc(50% - 20px); /* Ajuste para 2 imagens por linha */
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria-item {
+        flex: 1 1 calc(100% - 20px); /* Ajuste para 1 imagem por linha */
+    }
+}
+
+
+.prev, .next {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta a centralização */
+    color: transparent; /* Torna a cor invisível */
+    font-size: 40px;
+    cursor: pointer;
+    pointer-events: auto; /* Garante que os cliques sejam detectados */
+    width: 50px; /* Largura da área clicável */
+    height: 100%; /* Altura total para cobrir a área */
+}
+
+.prev {
+    left: 20px; /* Posição da seta anterior */
+}
+
+.next {
+    right: 20px; /* Posição da seta seguinte */
+}
+
+
+/* Estilo da galeria já existente */
+.galeria-item img {
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse sobre a imagem */
+}
+
+/* Lightbox (modal) */
+.lightbox {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    z-index: 1000; /* Coloca a imagem sobre todos os outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo preto semi-transparente */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.lightbox-imagem {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fechar {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fechar:hover, .fechar:focus {
+    color: #FFD700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Estilo para os ícones de mídia social no rodapé */
+footer .social-icon {
+    width: 24px; /* Define o tamanho do ícone (diminua conforme necessário) */
+    height: 24px;
+    margin: 0 10px; /* Espaçamento entre os ícones */
+}
+
+/* Rodapé */
+footer {
+    background-color: rgb(255, 242, 0); /* Fundo amarelo */
+    color: rgb(0, 0, 0); /* Cor do texto preta */
+    text-align: center;
+    padding: 10px 0; /* Aumentei um pouco para dar mais espaço para o conteúdo */
+    width: 100%; /* Faz o rodapé ocupar toda a largura da página */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+}
+
+footer p, footer h2 {
+    margin: 0; /* Remove margens para evitar espaçamento extra */
+    padding: 5px 0; /* Adiciona espaçamento interno controlado */
+}
+
+/* Estilos adicionais para links de ícones sociais */
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline-block;
+}
+
+footer ul li a {
+    text-decoration: none;
+}
+
